@@ -23,7 +23,7 @@ rasdial "A7 VPN" /DISCONNECT >NUL
 powershell -command "Remove-VpnConnection -Force -Name 'A7 VPN'" >NUL
 powershell -command "Add-VpnConnection -Name 'A7 VPN' -ServerAddress 'server1.freevpn.me'" >NUL
 cls & color 9F & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo              Connecting to A7 VPN... & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo.
-rasdial "A7 VPN" "freevpn.me" "hRfV4Jnt6e" >NUL
+rasdial "A7 VPN" "freevpn.me" "PnV7m9JnEDv" >NUL
 FOR /F "tokens=*" %%g IN ('powershell -command "Get-VpnConnection -Name 'A7 VPN'" ^| findstr /l "ConnectionStatus"') do (if not "%%g"=="ConnectionStatus      : Connected" (cls & set /a vpnerror=vpnerror+1 & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & color CF & echo  Connection failed, trying with another server... & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & goto server))
 set s=0& set m=0& set h=0& set ss=:0& set mm=:0& set hh=[0
 cls & echo. & echo. & echo. & echo. & echo. & echo. & color AF & echo                    %hh%%h%%mm%%m%%ss%%s%] & echo. & echo         Successfully connected to A7 VPN & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo. & echo.
